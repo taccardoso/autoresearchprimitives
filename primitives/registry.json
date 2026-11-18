@@ -1,0 +1,526 @@
+{
+ "schema": "primitive-skill-registry/v1",
+ "version": "1.1.0",
+ "status": "ACTIVE_CANONICAL",
+ "authority": "single canonical primitive list and derivation contract for every active skill in every Windows and WSL harness",
+ "baseline_primitive": "skill.execute_contract",
+ "primitive_skill_ids": [
+  "skill.execute_contract",
+  "context.read",
+  "knowledge.search",
+  "source.fetch",
+  "content.extract",
+  "content.transform",
+  "data.analyze",
+  "code.implement",
+  "automation.execute",
+  "browser.interact",
+  "media.process",
+  "decision.route",
+  "state.manage",
+  "artifact.persist",
+  "evidence.verify",
+  "identity.authorize",
+  "communication.notify",
+  "human.review",
+  "experiment.initialize",
+  "candidate.propose",
+  "experiment.evaluate",
+  "experiment.record",
+  "experiment.decide",
+  "quota.preflight"
+ ],
+ "primitives": [
+  {
+   "id": "skill.execute_contract",
+   "title": "Execute the skill contract",
+   "kind": "primitive-skill",
+   "contract": "Interpret the selected skill's purpose, inputs, outputs, constraints and completion criteria before taking action.",
+   "input": "skill name, description, explicit dependencies and instructions",
+   "output": "an executable plan whose steps are primitive skill invocations",
+   "completion": "the selected skill's declared output is produced or its declared blocker is returned",
+   "signals": []
+  },
+  {
+   "id": "context.read",
+   "title": "Read local context",
+   "kind": "primitive-skill",
+   "contract": "Read only the local files, directories, metadata, configuration or schemas needed for the task.",
+   "input": "local paths and a bounded read budget",
+   "output": "a provenance-bearing context slice",
+   "completion": "the required context is read or the missing path is named",
+   "signals": [
+    "read file",
+    "inspect",
+    "filesystem",
+    "directory",
+    "metadata",
+    "schema",
+    "configuration",
+    "catalog",
+    "inventory",
+    "load file"
+   ]
+  },
+  {
+   "id": "knowledge.search",
+   "title": "Search and retrieve knowledge",
+   "kind": "primitive-skill",
+   "contract": "Search an approved local or remote knowledge source and return candidate records with provenance.",
+   "input": "query, source scope, freshness and result limit",
+   "output": "ranked candidate records or an explicit no-match result",
+   "completion": "the query is answered within the declared source and coverage bounds",
+   "signals": [
+    "search",
+    "query",
+    "lookup",
+    "find",
+    "discover",
+    "grep",
+    "qmd",
+    "index lookup",
+    "retrieval"
+   ]
+  },
+  {
+   "id": "source.fetch",
+   "title": "Fetch an external source",
+   "kind": "primitive-skill",
+   "contract": "Fetch an authorized source through its official API, connector or structured endpoint and preserve provenance.",
+   "input": "source identifier, URL or API request plus authorization scope",
+   "output": "the source payload and provenance metadata",
+   "completion": "the source response is obtained and validated or the access failure is named",
+   "signals": [
+    "fetch",
+    "download",
+    "http",
+    "url",
+    "scrape",
+    "crawl",
+    "api request",
+    "web request",
+    "webhook"
+   ]
+  },
+  {
+   "id": "content.extract",
+   "title": "Extract structured content",
+   "kind": "primitive-skill",
+   "contract": "Parse text, documents, HTML, PDF, OCR or media metadata into a structured representation without inventing content.",
+   "input": "source bytes or text plus extraction profile",
+   "output": "structured content with source locators",
+   "completion": "the requested fields or passages are extracted and their provenance is retained",
+   "signals": [
+    "extract",
+    "parse",
+    "ocr",
+    "transcription",
+    "pdf",
+    "html",
+    "markdown conversion",
+    "structured output",
+    "field extraction"
+   ]
+  },
+  {
+   "id": "content.transform",
+   "title": "Transform content",
+   "kind": "primitive-skill",
+   "contract": "Transform supplied content while preserving facts, provenance and the requested language, format or style.",
+   "input": "source content and transformation contract",
+   "output": "transformed content plus transformation receipt",
+   "completion": "the transformed content satisfies the declared format and fact-preservation checks",
+   "signals": [
+    "summarize",
+    "summarise",
+    "rewrite",
+    "translate",
+    "format",
+    "style",
+    "compose text",
+    "rewrite text",
+    "summarization",
+    "proofread"
+   ]
+  },
+  {
+   "id": "data.analyze",
+   "title": "Analyze data",
+   "kind": "primitive-skill",
+   "contract": "Compute declared statistics, models, evaluations or comparisons and expose assumptions and uncertainty.",
+   "input": "dataset, metric definitions and analysis constraints",
+   "output": "analysis result, assumptions and diagnostic evidence",
+   "completion": "the declared metric is computed and checked against the acceptance criteria",
+   "signals": [
+    "analyze",
+    "analysis",
+    "statistics",
+    "statistical",
+    "evaluate",
+    "evaluation",
+    "benchmark",
+    "metric",
+    "model comparison",
+    "score"
+   ]
+  },
+  {
+   "id": "code.implement",
+   "title": "Implement and test code",
+   "kind": "primitive-skill",
+   "contract": "Create or change code and prove the intended behavior with deterministic checks while preserving unrelated behavior.",
+   "input": "codebase context, change contract and acceptance tests",
+   "output": "code change, test evidence and rollback information",
+   "completion": "the acceptance tests pass or the precise implementation blocker is reported",
+   "signals": [
+    "implement",
+    "code change",
+    "refactor",
+    "debug",
+    "unit test",
+    "integration test",
+    "compile",
+    "build",
+    "patch code",
+    "developer"
+   ]
+  },
+  {
+   "id": "automation.execute",
+   "title": "Execute an automation",
+   "kind": "primitive-skill",
+   "contract": "Execute a bounded command, script, workflow or scheduled action through an authorized runner.",
+   "input": "command or workflow, scope, timeout and authorization",
+   "output": "execution result, exit status and side-effect receipt",
+   "completion": "the bounded action finishes and its result is read back",
+   "signals": [
+    "execute",
+    "run command",
+    "shell",
+    "powershell",
+    "bash",
+    "cli",
+    "script",
+    "workflow",
+    "cron",
+    "automation"
+   ]
+  },
+  {
+   "id": "browser.interact",
+   "title": "Interact with a browser or desktop",
+   "kind": "primitive-skill",
+   "contract": "Observe and interact with an authorized browser or desktop UI, recording the actions and their evidence.",
+   "input": "target application, action contract and safety scope",
+   "output": "UI state, actions taken and resulting evidence",
+   "completion": "the requested UI state is reached or the interaction failure is diagnosed",
+   "signals": [
+    "browser",
+    "playwright",
+    "chrome",
+    "click",
+    "navigate",
+    "desktop",
+    "gui",
+    "user interface",
+    "selenium"
+   ]
+  },
+  {
+   "id": "media.process",
+   "title": "Process media",
+   "kind": "primitive-skill",
+   "contract": "Process image, audio or video media with an explicit toolchain and retain the original plus readable derivatives.",
+   "input": "media asset, processing profile and output constraints",
+   "output": "processed media, metadata and readable derivative",
+   "completion": "the requested media output exists and its integrity is verified",
+   "signals": [
+    "image",
+    "photo",
+    "audio",
+    "video",
+    "speech",
+    "vlm",
+    "vision",
+    "render",
+    "transcribe media",
+    "multimedia"
+   ]
+  },
+  {
+   "id": "decision.route",
+   "title": "Route or classify a decision",
+   "kind": "primitive-skill",
+   "contract": "Classify a bounded case or select among declared routes, including an explicit null or human-review route.",
+   "input": "closed decision space, evidence state and decision policy",
+   "output": "selected route, confidence or abstention, and rationale",
+   "completion": "one declared route is selected or the case is routed to review without a forced answer",
+   "signals": [
+    "classify",
+    "classification",
+    "route",
+    "routing",
+    "choose",
+    "decision",
+    "recommend",
+    "triage",
+    "selector",
+    "router"
+   ]
+  },
+  {
+   "id": "state.manage",
+   "title": "Manage durable task state",
+   "kind": "primitive-skill",
+   "contract": "Create or update checkpoints, memory, queues or resumable state with atomic writes and explicit ownership.",
+   "input": "state transition, owner and durability boundary",
+   "output": "updated state, checkpoint or recovery receipt",
+   "completion": "the transition is durable, readable and safe to resume",
+   "signals": [
+    "memory",
+    "state",
+    "checkpoint",
+    "queue",
+    "session",
+    "cache",
+    "task state",
+    "resume",
+    "continuity",
+    "artifact index"
+   ]
+  },
+  {
+   "id": "artifact.persist",
+   "title": "Persist a durable artifact",
+   "kind": "primitive-skill",
+   "contract": "Persist a new or changed artifact in its canonical managed location, read it back and register its identity.",
+   "input": "artifact bytes, logical identity, canonical parent and evidence",
+   "output": "canonical object, readback receipt and discoverability record",
+   "completion": "readback and identity registration pass or the artifact remains unvalidated",
+   "signals": [
+    "save",
+    "persist",
+    "upload",
+    "drive",
+    "write file",
+    "write a file",
+    "commit",
+    "publish",
+    "create artifact",
+    "canonical file",
+    "archive"
+   ]
+  },
+  {
+   "id": "evidence.verify",
+   "title": "Verify evidence and completeness",
+   "kind": "primitive-skill",
+   "contract": "Check claims, hashes, tests, schemas, provenance and readback against explicit acceptance criteria.",
+   "input": "candidate result, acceptance criteria and source evidence",
+   "output": "PASS or FAIL verdict with machine-readable evidence",
+   "completion": "every mandatory criterion is decided and a failure names its blocker",
+   "signals": [
+    "verify",
+    "verification",
+    "validate",
+    "validation",
+    "proof",
+    "evidence",
+    "readback",
+    "sha256",
+    "hash check",
+    "quality gate",
+    "acceptance test"
+   ]
+  },
+  {
+   "id": "identity.authorize",
+   "title": "Authorize identity and scope",
+   "kind": "primitive-skill",
+   "contract": "Resolve the acting identity, consent, permissions and egress scope before protected work proceeds.",
+   "input": "requested action, principal, policy and available authorization evidence",
+   "output": "authorized scope, denied scope and audit reference",
+   "completion": "the action is explicitly authorized or denied without a partial fallback",
+   "signals": [
+    "auth",
+    "authentication",
+    "login",
+    "credential",
+    "token",
+    "permission",
+    "authorization",
+    "consent",
+    "scope guard",
+    "egress"
+   ]
+  },
+  {
+   "id": "communication.notify",
+   "title": "Deliver a notification",
+   "kind": "primitive-skill",
+   "contract": "Deliver a concise result to an authorized human or team surface and retain delivery proof.",
+   "input": "message, audience, channel capability and authorization",
+   "output": "delivery receipt with message identifier",
+   "completion": "the authorized surface accepts the message and returns a delivery receipt",
+   "signals": [
+    "notify",
+    "notification",
+    "telegram",
+    "email",
+    "send message",
+    "message send",
+    "alert",
+    "publish message",
+    "chat"
+   ]
+  },
+  {
+   "id": "human.review",
+   "title": "Escalate to human judgment",
+   "kind": "primitive-skill",
+   "contract": "Present the decision-relevant facts, alternatives and trade-offs for an authorized human decision.",
+   "input": "decision context, options, evidence and risk boundary",
+   "output": "human decision or an explicit pending state",
+   "completion": "the human decides or explicitly defers; the agent does not substitute a preference",
+   "signals": [
+    "human approval",
+    "human review",
+    "user approval",
+    "ask the user",
+    "confirm with user",
+    "consent",
+    "human judgment",
+    "manual approval"
+   ]
+  },
+  {
+   "completion": "the run context exists, every precondition is verified or named as missing, and the ledger is initialized",
+   "contract": "Establish a reproducible experiment context before any attempt: agree a run tag, create the isolated branch or workspace, read the in-scope files, verify the required data and cache are present, and create the empty results ledger.",
+   "id": "experiment.initialize",
+   "input": "run tag, in-scope file list, data or cache requirements, ledger schema",
+   "kind": "primitive-skill",
+   "output": "initialized run context, verified preconditions and an empty results ledger",
+   "signals": [
+    "run tag",
+    "results.tsv",
+    "research init",
+    "initialize",
+    "fresh run",
+    "baseline run"
+   ],
+   "title": "Initialize a reproducible experiment run"
+  },
+  {
+   "completion": "a candidate exists that satisfies every guard rule, or the candidate is rejected with the violated rule named",
+   "contract": "Produce one candidate research artifact from the current incumbent under a declared guard, such as a source-size limit, an import allowlist, a denied-call list or a response schema, without mutating the incumbent until the candidate is accepted.",
+   "id": "candidate.propose",
+   "input": "incumbent artifact, task or hypothesis, guard rules and output schema",
+   "kind": "primitive-skill",
+   "output": "one candidate artifact plus the guard verdict that admitted or rejected it",
+   "signals": [
+    "candidate",
+    "hypothesis",
+    "experimental idea",
+    "policy.md",
+    "train.py",
+    "incumbent",
+    "tries ideas"
+   ],
+   "title": "Propose a guarded candidate change"
+  },
+  {
+   "completion": "the metric is read from the run log, or the run is classified as crashed with its failure evidence",
+   "contract": "Execute the candidate under a fixed time budget or fixed workload, capture exactly one comparable metric from the run log, and classify a crash as a first-class outcome instead of a missing value.",
+   "id": "experiment.evaluate",
+   "input": "candidate artifact, fixed budget, metric definition, dataset and log target",
+   "kind": "primitive-skill",
+   "output": "metric value, budget consumption, resource peak and an explicit crash classification",
+   "signals": [
+    "experiment loop",
+    "experiment",
+    "fixed time budget",
+    "val_bpb",
+    "run.log",
+    "measures results",
+    "crashed"
+   ],
+   "title": "Run a bounded experiment and capture the metric"
+  },
+  {
+   "completion": "the row and the event are readable back and the checkpoint resumes the loop",
+   "contract": "Append one schema-conformant row per attempt to the durable results ledger and one event to the event log, and checkpoint the campaign state so the loop can be resumed after any interruption.",
+   "id": "experiment.record",
+   "input": "attempt outcome, metric, ledger schema, checkpoint boundary and owner",
+   "kind": "primitive-skill",
+   "output": "appended ledger row, appended event and a durable checkpoint",
+   "signals": [
+    "results.tsv",
+    "events.jsonl",
+    "campaign.json",
+    "record the results",
+    "ledger",
+    "attempt",
+    "checkpoint"
+   ],
+   "title": "Append the attempt to the durable results ledger"
+  },
+  {
+   "completion": "one verdict is emitted with its evidence and the branch or workspace reflects it",
+   "contract": "Compare the candidate metric with the incumbent metric under the declared acceptance rule, apply the declared tie-breaker such as the simplicity criterion, and emit exactly one of keep, discard or crash with the reason.",
+   "id": "experiment.decide",
+   "input": "candidate metric, incumbent metric, acceptance rule and tie-breaker",
+   "kind": "primitive-skill",
+   "output": "keep, discard or crash verdict with the comparison evidence and the resulting revert or advance action",
+   "signals": [
+    "keeps what works",
+    "discards",
+    "keep or discard",
+    "simplicity criterion",
+    "reset back",
+    "advance the branch",
+    "keep"
+   ],
+   "title": "Keep or discard the candidate against the incumbent"
+  },
+  {
+   "completion": "the campaign is allowed to start with a positive preflight verdict, or it is stopped with the blocking reason named",
+   "contract": "Confirm provider authentication, model reachability and remaining quota with one minimal request before a campaign starts, and stop the campaign closed on authentication failure, rate limiting, explicit low quota or repeated transient failure.",
+   "id": "quota.preflight",
+   "input": "provider endpoint, credential reference, model identifier and quota endpoint",
+   "kind": "primitive-skill",
+   "output": "preflight verdict with the quota state, the model in use and the reason a campaign must not start",
+   "signals": [
+    "preflight",
+    "quota",
+    "rate limit",
+    "token plan",
+    "low quota"
+   ],
+   "title": "Verify provider credentials and quota before spending tokens"
+  }
+ ],
+ "derivation": {
+  "algorithm": "primitive-skill-composition/v1",
+  "explicit_fields": [
+   "primitives",
+   "x-primitives"
+  ],
+  "source_priority": [
+   "explicit_primitives",
+   "name_and_description",
+   "explicit_skill_dependencies",
+   "markdown_headings"
+  ],
+  "frontmatter_scan_bytes": 1048576,
+  "heading_limit": 80,
+  "max_signals_per_primitive": 3,
+  "rule": "A skill is valid only when its derived composition contains the baseline primitive and every additional primitive resolves to this registry. Explicit primitive IDs are authoritative but unknown IDs fail closed.",
+  "notes": [
+   "The composition map is derived and rebuildable; source SKILL.md files remain original and are not rewritten in place.",
+   "The active boundary is a direct child of a registered skills root that exposes SKILL.md; nested examples, references and vendor payloads are not independently loadable skills.",
+   "Copies with the same name and different bytes are separate content variants and each receives its own composition.",
+   "Archives, snapshots, rollback trees, vendor imports and filesystem backup trees are not active skill surfaces.",
+   "Autoresearch loop primitives (experiment.*, candidate.propose, quota.preflight) are anchored on karpathy/autoresearch program.md and on the harness-local autoresearch-minimax-api adaptation; each addition keeps the baseline primitive mandatory."
+  ]
+ }
+}

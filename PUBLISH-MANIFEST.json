@@ -1,0 +1,72 @@
+{
+  "canonical_registry": {
+    "path": "C:\\Users\\mascc\\.harness-canonical\\control\\PRIMITIVE_SKILL_REGISTRY.json",
+    "primitive_count": 24,
+    "sha256": "32c3a2ec8ed35c82e64a4ae6c724064fda9bdf8161d1b6c9cd5d05bd7290cfe1",
+    "version": "1.1.0"
+  },
+  "files": [
+    {
+      "bytes": 19,
+      "path": ".gitignore",
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "bytes": 3957,
+      "path": "DEDUP-REPORT.md",
+      "sha256": "6c03d8ea71558e8aac06d3105bf9d5e9012ff139be9b1c3a501b095980f5d2e5"
+    },
+    {
+      "bytes": 1092,
+      "path": "LICENSE",
+      "sha256": "556cf38782d2f23e185c246823b0fa27b9c31610d3873f4c874399331ba6a2fd"
+    },
+    {
+      "bytes": 7433,
+      "path": "primitives/dedup.py",
+      "sha256": "a4516777afd996ce9689701afd31bd1f281fe0c13029444beea15e04767bdf07"
+    },
+    {
+      "bytes": 7197,
+      "path": "primitives/derive.py",
+      "sha256": "d8e70774a39e41e3b9041e03719c3085e95fa848597e2f260d7bfe6d769f84b0"
+    },
+    {
+      "bytes": 18994,
+      "path": "primitives/registry.json",
+      "sha256": "32c3a2ec8ed35c82e64a4ae6c724064fda9bdf8161d1b6c9cd5d05bd7290cfe1"
+    },
+    {
+      "bytes": 4027,
+      "path": "README.md",
+      "sha256": "367fac9f27a56f78cd53782bfd53aacb87af54459532537093dc1db4feb65d98"
+    },
+    {
+      "bytes": 4026,
+      "path": "SKILL.md",
+      "sha256": "be1637838f88848751ce372cd83d552a74338d447d399ea75773a82adf8ac2ed"
+    },
+    {
+      "bytes": 114369,
+      "path": "skills/DEDUP-APPLIED.jsonl",
+      "sha256": "b7299fbdef9b39ce5bad4e20a3015b4890012dfbe63747526333b0def3775b6a"
+    },
+    {
+      "bytes": 75919,
+      "path": "skills/DUPLICATES.csv",
+      "sha256": "0183ad0f967192976489d7449a580175b80e9223af20979f6147022922e88308"
+    },
+    {
+      "bytes": 10752398,
+      "path": "skills/INDEX.json",
+      "sha256": "0eb19ed732483ecc424a28a1a65d09668e7f2f0a68afd7677e08335b6751f3e9"
+    },
+    {
+      "bytes": 5035,
+      "path": "skills/PRIMITIVES-DECLARED.jsonl",
+      "sha256": "21e2d75ea6ceaf8b313cd4ef113cba1d3ebeb8760fcd4d6a46f60c1b8d7dc15a"
+    }
+  ],
+  "generated_at": "2026-11-18T00:47:46+00:00",
+  "schema": "autoresearchprimitives-publish/v1"
+}
