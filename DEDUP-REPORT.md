@@ -1,6 +1,6 @@
 # DEDUP-REPORT
 
-Generated 2026-11-18T03:18:31+00:00 from the
+Generated 2026-11-18T03:45:33+00:00 from the
 canonical artifacts of the harness control plane.
 
 ## Census (measured before the de-duplication)
@@ -30,6 +30,7 @@ Nothing was deleted.
 | --- | --- |
 | identical-content pairs in the plan | 128 |
 | pairs applicable on disk (both sides present, sha256 equal) | 123 |
+| pairs not on disk (the census path drifted) | 8 |
 | aliases actually applied | 120 |
 | ... verified: alias reads the canonical bytes | 120 |
 | ... verified: alias is not an independent copy | 120 |
@@ -37,7 +38,7 @@ Nothing was deleted.
 | aliases left as an independent copy | 0 |
 | bytes no longer duplicated | 3129252 |
 | bytes still duplicated in the applied scope | 0 |
-| pairs deferred (root reserved by a parallel lease) | 3 |
+| pairs deferred in the first pass and applied after the path-precise lease | 3 |
 
 Alias mechanisms: {'symlink': 108, 'hardlink': 12}
 

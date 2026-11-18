@@ -17,9 +17,9 @@
       "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
     },
     {
-      "bytes": 3957,
+      "bytes": 4032,
       "path": "DEDUP-REPORT.md",
-      "sha256": "13ffb5807f8dd877db1d2504e790b6e3e4021fa497e15531f0a3a7f76bdbcaab"
+      "sha256": "456833b972466197c0fef02f803b9db702a54bcf14ade780c99167df893fdbe2"
     },
     {
       "bytes": 1092,
@@ -72,6 +72,6 @@
       "sha256": "21e2d75ea6ceaf8b313cd4ef113cba1d3ebeb8760fcd4d6a46f60c1b8d7dc15a"
     }
   ],
-  "generated_at": "2026-11-18T03:18:31+00:00",
+  "generated_at": "2026-11-18T03:45:33+00:00",
   "schema": "autoresearchprimitives-publish/v1"
 }
