@@ -19,7 +19,7 @@
     {
       "bytes": 3957,
       "path": "DEDUP-REPORT.md",
-      "sha256": "1b02b46e1902074dba766c0d63e3d0366b80b563b3419d03a7e76804630d2ada"
+      "sha256": "13ffb5807f8dd877db1d2504e790b6e3e4021fa497e15531f0a3a7f76bdbcaab"
     },
     {
       "bytes": 1092,
@@ -52,9 +52,9 @@
       "sha256": "be1637838f88848751ce372cd83d552a74338d447d399ea75773a82adf8ac2ed"
     },
     {
-      "bytes": 114369,
+      "bytes": 117532,
       "path": "skills/DEDUP-APPLIED.jsonl",
-      "sha256": "b7299fbdef9b39ce5bad4e20a3015b4890012dfbe63747526333b0def3775b6a"
+      "sha256": "f69cb2e373810daad8669528cfe3ca66f3f088edce3d1dff8785b7bcaefe081a"
     },
     {
       "bytes": 75919,
@@ -72,6 +72,6 @@
       "sha256": "21e2d75ea6ceaf8b313cd4ef113cba1d3ebeb8760fcd4d6a46f60c1b8d7dc15a"
     }
   ],
-  "generated_at": "2026-11-18T01:00:22+00:00",
+  "generated_at": "2026-11-18T03:18:31+00:00",
   "schema": "autoresearchprimitives-publish/v1"
 }

@@ -1,6 +1,6 @@
 # DEDUP-REPORT
 
-Generated 2026-11-18T01:00:22+00:00 from the
+Generated 2026-11-18T03:18:31+00:00 from the
 canonical artifacts of the harness control plane.
 
 ## Census (measured before the de-duplication)
@@ -29,17 +29,17 @@ Nothing was deleted.
 | metric | value |
 | --- | --- |
 | identical-content pairs in the plan | 128 |
-| pairs applicable on disk (both sides present, sha256 equal) | 120 |
-| aliases actually applied | 117 |
-| ... verified: alias reads the canonical bytes | 117 |
-| ... verified: alias is not an independent copy | 117 |
-| ... verified: dated tar carries the original bytes | 117 |
+| pairs applicable on disk (both sides present, sha256 equal) | 123 |
+| aliases actually applied | 120 |
+| ... verified: alias reads the canonical bytes | 120 |
+| ... verified: alias is not an independent copy | 120 |
+| ... verified: dated tar carries the original bytes | 120 |
 | aliases left as an independent copy | 0 |
-| bytes no longer duplicated | 3054782 |
+| bytes no longer duplicated | 3129252 |
 | bytes still duplicated in the applied scope | 0 |
 | pairs deferred (root reserved by a parallel lease) | 3 |
 
-Alias mechanisms: {'symlink': 105, 'hardlink': 12}
+Alias mechanisms: {'symlink': 108, 'hardlink': 12}
 
 * **symlink** - the duplicate becomes a symbolic link to the canonical
   `SKILL.md`. Used when the duplicate and the canonical are both on the
