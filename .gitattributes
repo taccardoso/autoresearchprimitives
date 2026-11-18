@@ -1,0 +1,3 @@
+# blobs are stored byte-for-byte: the published sha256 must equal the
+# local sha256 (the canonical registry is CRLF).
+* -text

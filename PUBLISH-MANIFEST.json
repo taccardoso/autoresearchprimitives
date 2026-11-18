@@ -7,6 +7,11 @@
   },
   "files": [
     {
+      "bytes": 127,
+      "path": ".gitattributes",
+      "sha256": "3b4b77064fe4555f89615a3871f0613a589c58c5d13cac0482659130ab711350"
+    },
+    {
       "bytes": 19,
       "path": ".gitignore",
       "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
@@ -14,7 +19,7 @@
     {
       "bytes": 3957,
       "path": "DEDUP-REPORT.md",
-      "sha256": "6c03d8ea71558e8aac06d3105bf9d5e9012ff139be9b1c3a501b095980f5d2e5"
+      "sha256": "1b02b46e1902074dba766c0d63e3d0366b80b563b3419d03a7e76804630d2ada"
     },
     {
       "bytes": 1092,
@@ -67,6 +72,6 @@
       "sha256": "21e2d75ea6ceaf8b313cd4ef113cba1d3ebeb8760fcd4d6a46f60c1b8d7dc15a"
     }
   ],
-  "generated_at": "2026-11-18T00:47:46+00:00",
+  "generated_at": "2026-11-18T01:00:22+00:00",
   "schema": "autoresearchprimitives-publish/v1"
 }
